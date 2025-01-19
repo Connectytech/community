@@ -22,6 +22,8 @@ header {
   background: #000e19;
   /* border-bottom: .5px solid white; */
   z-index: 10;
+  border: solid slategray;
+  border-width: 0 0 1px 0;
 }
 
 .logo {
