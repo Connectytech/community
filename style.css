@@ -41,6 +41,8 @@ header {
   background: #021927;
   border-bottom: .5px solid #383f4f;
   z-index: 10;
+  border: solid slategray;
+  border-width: 0 0 1px 0;
 }
 
 .logo {
