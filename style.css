@@ -6,9 +6,28 @@
   user-select: none;
 }
 
+html{
+  /* background: white; */
+  background: black;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #000e19;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url('webp/background-2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#app{
+  /* background-color: #000e19; */
   color: #ccd6f6;
+  max-width: 1700px;
+  width: 100%;
 }
 
 header {
@@ -19,8 +38,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: #000e19;
-  /* border-bottom: .5px solid white; */
+  background: #021927;
+  border-bottom: .5px solid #383f4f;
   z-index: 10;
 }
 
@@ -46,13 +65,24 @@ nav ul li a {
   transition: color 0.3s;
 }
 
+nav ul li a.active,
+nav ul li a.active:hover {
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: .2rem;
+  background: linear-gradient(#66f5fc, #03788d);
+  padding: .8rem .6rem;
+}
+
+
 nav ul li a:hover {
   color: #64ffda;
 }
 
 
 main {
-  width: 1343px;
+  /* width: 1343px; */
+  width: 100%;
   min-height: calc(100vh - 62px);
 }
 
@@ -204,7 +234,6 @@ main {
 .objectif .description .container .objectif-items p{
   letter-spacing: 1px;
   text-align: justify;
-  font-size: small;
 }
 
 .img-objectif{
@@ -243,10 +272,17 @@ main {
   top: 15%;
 }
 
-.service .container-relative{
-  position: relative;
+.service .part{
   width: 50%;
-  min-height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service .container-relative{
+  background: green;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -260,13 +296,13 @@ main {
 }
 
 .service .container-relative .abs1{
-  left: 3rem;
-  top: 4rem;
+  left: -2rem;
+  top: -3rem;
 }
 
 .service .container-relative .abs2{
-  right: 3rem;
-  bottom: 4rem;
+  right: -2rem;
+  bottom: -3rem;
 }
 
 .service .container-relative .container-absolute .img .image1,
@@ -312,7 +348,6 @@ main {
   height: fit-content;
   padding: 1rem;
   background: linear-gradient(#03788d, #66f5fc);
-  font-size: small;
 }
 
 .service .service-description .service-items p{
@@ -320,7 +355,6 @@ main {
   width: 30rem;
   height: fit-content;
   text-align: justify;
-  font-size: small;
   letter-spacing: 1px;
 }
 
@@ -347,14 +381,12 @@ main {
   height: fit-content;
   padding: 1rem;
   background: linear-gradient(#66f5fc, #03788d);
-  font-size: small;
 }
 
 .mission .mission-description .mission-items p{
   width: 22rem;
   height: fit-content;
   text-align: justify;
-  font-size: small;
   letter-spacing: 1px;
   
 }
@@ -402,7 +434,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.portfolio .part{
+  background: red;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio h1{
@@ -532,7 +571,6 @@ main {
 .sector-activity .container-activity .items-activity p{
   width: 16rem;
   text-align: justify;
-  font-size: small;
 }
 
 .contact{
@@ -598,7 +636,9 @@ main {
   height: 2rem;
 }
 
-.contact .description .item-contact p{
+.contact .description .item-contact a{
   letter-spacing: 1px;
   font-size: large;
+  text-decoration: none;
+  color: white;
 }
