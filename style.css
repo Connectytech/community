@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-image: url('webp/background-2.jpg');
+  background-image: url('webp/background-white-3.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +25,8 @@ body {
 
 #app{
   /* background-color: #000e19; */
-  color: #ccd6f6;
+  color: #03010f;
+  font-weight: 400;
   max-width: 1700px;
   width: 100%;
 }
@@ -38,7 +39,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: #021927;
+  /* background: #021927; */
+  background: #f5f6f7;
   border-bottom: .5px solid #383f4f;
   z-index: 10;
   border: solid slategray;
@@ -62,14 +64,16 @@ nav ul {
 }
 
 nav ul li a {
-  color: #ccd6f6;
+  /* color: #ccd6f6; */
+  color: #03010f;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 nav ul li a.active,
 nav ul li a.active:hover {
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: #03010f;
   font-weight: bold;
   border-radius: .2rem;
   background: linear-gradient(#66f5fc, #03788d);
@@ -78,14 +82,15 @@ nav ul li a.active:hover {
 
 
 nav ul li a:hover {
-  color: #64ffda;
+  color: #08021a;
 }
 
 
 main {
   /* width: 1343px; */
   width: 100%;
-  min-height: calc(100vh - 62px);
+  height: fit-content;
+  /* min-height: calc(100vh - 62px); */
 }
 
 .layout {
@@ -122,7 +127,8 @@ main {
 .welcome h1 {
   letter-spacing: .5rem;
   text-align: center;
-  color: transparent;
+  /* color: transparent; */
+  color: #03010f;
   /* text-shadow:
     0 0 10px #03bcf4,
     0 0 20px #03bcf4,
@@ -130,7 +136,7 @@ main {
     0 0 80px #03bcf4,
     0 0 160px #03bcf4; */
   letter-spacing: 2px;
-  -webkit-text-stroke: 1px #65e2ee;
+  /* -webkit-text-stroke: 1px #65e2ee; */
   font-size: 5rem;
   margin: 2rem 0;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
@@ -178,7 +184,8 @@ main {
 .smal-title{
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px #56d5e0;
+  color: #03010f;
+  /* -webkit-text-stroke: 1px #56d5e0; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 3rem;
   letter-spacing: .2rem;
@@ -230,7 +237,8 @@ main {
 
 .objectif .description .container .objectif-items h3{
   letter-spacing: 3px;
-  color: #64ffda;
+  /* color: #64ffda; */
+  color: #03010f;
 }
 
 .objectif .description .container .objectif-items p{
@@ -523,14 +531,22 @@ main {
 }
 
 .sector-activity .container-activity .items-activity{
+  position: relative;
   width: fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  padding: 0.5rem;
+  transition: .4s ease-in-out;
   gap: 2rem;
 }
+
+/* .sector-activity .container-activity .items-activity:hover{
+  box-shadow: 1px 2px 30px slategray;
+  border-radius: 1rem;
+} */
 
 .sector-activity .container-activity .items-activity .rel{
   position: relative;
@@ -565,14 +581,160 @@ main {
 }
 
 .sector-activity .container-activity .items-activity h4{
-  color: #3e9da6;
+  /* color: #3e9da6; */
+  color: #03010f;
   text-transform: capitalize;
   letter-spacing: 1px;
+  font-size: 1.7rem;
+  word-wrap: break-word;
+  max-width: 18rem;
+  text-align: center;
 }
 
 .sector-activity .container-activity .items-activity p{
-  width: 16rem;
+  position: absolute;
+  top: 2rem;
+  width: 95%;
   text-align: justify;
+  border-radius: 1rem;
+  display: none;
+  background: white;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.team{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.team>img{
+  margin-top: 2.5rem;
+  width: 80%;
+}
+
+.team .diagramme{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 6rem;
+}
+
+.team .line{
+  border: solid black;
+  border-width: 0 0 1px 0;
+}
+
+.team .line-long{
+  width: 10rem;
+}
+
+.team .line-small{
+  width: 6rem;
+}
+
+.team .line-vertical{
+  position: absolute;
+  border: solid black;
+  height: 10rem;
+  border-width: 0 0 0 1px;
+}
+
+.team .vertical1{
+  margin-top: 10rem;
+}
+.team .vertical2{
+  margin-top: 10.7rem;
+  left: 23%;
+  height: 7.7rem;
+}
+.team .vertical3{
+  margin-top: 10.7rem;
+  right: 23%;
+  height: 7.7rem;
+}
+.team .vertical4{
+  margin-top: 18.5rem;
+  height: 15.5rem;
+}
+
+.team .diagramme .line-order{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .diagramme .line-order .role{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .diagramme .line-order .role p{
+  text-align: center;
+  border: 1px solid #02021b;
+  padding: 0.4rem 1rem;
+  border-radius: .5rem;
+  color: white;
+  text-transform: capitalize;
+  min-width: 15rem;
+  min-height: 3rem;
+}
+
+.team .diagramme .line-order .role p b{
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.team .diagramme .line-order .role p.green{
+  background: #009999;
+}
+.team .diagramme .line-order .role p.blue{
+  background: #0066cb;
+}
+.team .diagramme .line-order .role p.gray{
+  background: #a8c4eb;
+  color: black;
+}
+
+.team .diagramme .line-order .role .img-hidden{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+  box-shadow: 1px 2px 30px slategray;
+  border-radius: 5px;
+  width: fit-content;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.team .diagramme .line-order .role .hidden-left{
+  left: -10rem;
+}
+.team .diagramme .line-order .role .hidden-right{
+  right: -10rem;
+}
+
+.team .diagramme .line-order .role .img-hidden h4{
+  letter-spacing: 2px;
+  text-align: center;
+  max-width: 10rem;
+  word-wrap: break-word;
+  padding: .5rem 0;
+}
+
+.team .diagramme .line-order .role .img-hidden img{
+  width: 10rem;
+  max-height: 11rem;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .contact{
@@ -643,4 +805,24 @@ main {
   font-size: large;
   text-decoration: none;
   color: white;
+  color: #03010f;
+}
+
+
+
+.team .diagramme .line-order .role .visible,
+.sector-activity .container-activity .items-activity p.visible{
+  display: block;
+  animation: .3s animatevisible ease-in-out;
+  box-shadow: 1px 2px 30px slategray;
+  border-radius: 1rem;
+}
+
+@keyframes animatevisible {
+  from{
+    scale: 0;
+  }
+  to{
+    scale: 1;
+  }
 }
