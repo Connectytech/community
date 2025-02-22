@@ -61,5 +61,5 @@ window.addEventListener('scroll', () => {
 
 setActiveLink()
 
-addFonctionnality(listActitiviesItem, listActitiviesDescription)
-addFonctionnality(listRoles, hiddenImage)
+// addFonctionnality(listActitiviesItem, listActitiviesDescription)
+// addFonctionnality(listRoles, hiddenImage)
